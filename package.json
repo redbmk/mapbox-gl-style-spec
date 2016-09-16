@@ -1,7 +1,7 @@
 {
   "name": "mapbox-gl-style-spec",
   "description": "a specification for mapbox gl styles",
-  "version": "8.8.0",
+  "version": "8.8.0-testing",
   "author": "Mapbox",
   "bin": {
     "gl-style-migrate": "bin/gl-style-migrate",
@@ -38,7 +38,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git@github.com:mapbox/mapbox-gl-style-spec.git"
+    "url": "git@github.com:redbmk/mapbox-gl-style-spec.git"
   },
   "scripts": {
     "build": "./minify.js && npm run docs",
