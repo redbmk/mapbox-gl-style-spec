@@ -175,6 +175,11 @@
       "default": false,
       "doc": "If the data is a collection of point features, setting this to true clusters the points by radius into groups."
     },
+    "clusterAggregates": {
+      "type": "*",
+      "default": null,
+      "doc": "Properties to aggregate in the form of `{ destProperty: [ aggType, srcProperty ] }`. Valid `aggType`s are 'min', 'max', or 'sum'. For example, `{ property1Sum: [ 'sum', 'property1' ], property2: [ 'min', 'property2' ] }`"
+    },
     "clusterRadius": {
       "type": "number",
       "default": 50,
