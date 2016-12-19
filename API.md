@@ -1,4 +1,26 @@
 
+### `exports(layers)`
+
+Given an array of layers, some of which may contain `ref` properties
+whose value is the `id` of another property, return a new array where
+such layers have been augmented with the 'type', 'source', etc. properties
+from the parent layer, and the `ref` property has been removed.
+
+The input is not modified. The output may contain references to portions
+of the input.
+
+
+### Parameters
+
+| parameter | type             | description |
+| --------- | ---------------- | ----------- |
+| `layers`  | Array\.\<Layer\> |             |
+
+
+
+**Returns** `Array.<Layer>`, 
+
+
 ### `diffStyles([before], after)`
 
 Diff two stylesheet
@@ -58,6 +80,29 @@ fs.writeFileSync('./dest.min.json', format(style, 0));
 
 
 **Returns** `string`, stringified formatted JSON
+
+
+### `exports(layers)`
+
+Given an array of layers, return an array of arrays of layers where all
+layers in each group have identical layout-affecting properties. These
+are the properties that were formerly used by explicit `ref` mechanism
+for layers: 'type', 'source', 'source-layer', 'minzoom', 'maxzoom',
+'filter', and 'layout'.
+
+The input is not modified. The output layers are references to the
+input layers.
+
+
+### Parameters
+
+| parameter | type             | description |
+| --------- | ---------------- | ----------- |
+| `layers`  | Array\.\<Layer\> |             |
+
+
+
+**Returns** `Array.<Array.<Layer>>`, 
 
 
 ### `migrate(style)`
